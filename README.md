@@ -1,1 +1,1 @@
-Control_works jn C#
+Control_works on C#
