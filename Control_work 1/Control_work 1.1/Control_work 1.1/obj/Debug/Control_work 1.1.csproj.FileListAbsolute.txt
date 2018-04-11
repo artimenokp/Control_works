@@ -7,3 +7,4 @@ D:\Projects\MVS\Control_works\Control_work 1\Control_work 1.1\Control_work 1.1\o
 D:\Projects\MVS\Control_works\Control_work 1\Control_work 1.1\Control_work 1.1\obj\Debug\Control_work 1.1.csproj.CoreCompileInputs.cache
 D:\Projects\MVS\Control_works\Control_work 1\Control_work 1.1\Control_work 1.1\obj\Debug\Control_work 1.1.exe
 D:\Projects\MVS\Control_works\Control_work 1\Control_work 1.1\Control_work 1.1\obj\Debug\Control_work 1.1.pdb
+D:\Projects\MVS\Control_works\Control_work 1\Control_work 1.1\Control_work 1.1\obj\Debug\Control_work_1._1.MainForm.resources

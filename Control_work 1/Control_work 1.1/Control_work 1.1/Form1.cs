@@ -16,5 +16,15 @@ namespace Control_work_1._1
         {
             InitializeComponent();
         }
+
+        private void textBoxStartx_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxEndx_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

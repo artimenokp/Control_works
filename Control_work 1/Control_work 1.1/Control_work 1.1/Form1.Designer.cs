@@ -71,6 +71,7 @@
             this.textBoxStartx.Name = "textBoxStartx";
             this.textBoxStartx.Size = new System.Drawing.Size(106, 20);
             this.textBoxStartx.TabIndex = 3;
+            this.textBoxStartx.TextChanged += new System.EventHandler(this.textBoxStartx_TextChanged);
             // 
             // textBoxEndx
             // 
@@ -78,6 +79,7 @@
             this.textBoxEndx.Name = "textBoxEndx";
             this.textBoxEndx.Size = new System.Drawing.Size(106, 20);
             this.textBoxEndx.TabIndex = 4;
+            this.textBoxEndx.TextChanged += new System.EventHandler(this.textBoxEndx_TextChanged);
             // 
             // textBoxStepx
             // 

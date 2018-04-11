@@ -8,18 +8,17 @@ namespace Control_work_1._1
 {
     static class Program
     {
-        public int Sum(int n, int x)
+        public static int Sum(int n, int x)
         {
-
+            return (0);
         }
-        public int Multi(int x)
+        public static int Multi(int x)
         {
-
+            return (0);
         }
-        public int SubMod (int Multi, int Sum)
+        public static int SubMod (int Multi, int Sum)
         {
-            
-
+            return (0);
         }
         /// <summary>
         /// Главная точка входа для приложения.
