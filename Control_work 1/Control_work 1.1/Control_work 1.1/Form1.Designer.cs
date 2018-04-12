@@ -36,6 +36,10 @@
             this.textBoxStepx = new System.Windows.Forms.TextBox();
             this.Inputn = new System.Windows.Forms.Label();
             this.textBoxInputn = new System.Windows.Forms.TextBox();
+            this.buttonD = new System.Windows.Forms.Button();
+            this.buttonC = new System.Windows.Forms.Button();
+            this.textBoxAnswer = new System.Windows.Forms.TextBox();
+            this.Answer = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Startx
@@ -72,6 +76,8 @@
             this.textBoxStartx.Size = new System.Drawing.Size(106, 20);
             this.textBoxStartx.TabIndex = 3;
             this.textBoxStartx.TextChanged += new System.EventHandler(this.textBoxStartx_TextChanged);
+            this.textBoxStartx.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxStartx_KeyDown);
+            this.textBoxStartx.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxStartx_KeyPress);
             // 
             // textBoxEndx
             // 
@@ -80,6 +86,8 @@
             this.textBoxEndx.Size = new System.Drawing.Size(106, 20);
             this.textBoxEndx.TabIndex = 4;
             this.textBoxEndx.TextChanged += new System.EventHandler(this.textBoxEndx_TextChanged);
+            this.textBoxEndx.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxEndx_KeyDown);
+            this.textBoxEndx.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxEndx_KeyPress);
             // 
             // textBoxStepx
             // 
@@ -87,6 +95,9 @@
             this.textBoxStepx.Name = "textBoxStepx";
             this.textBoxStepx.Size = new System.Drawing.Size(106, 20);
             this.textBoxStepx.TabIndex = 5;
+            this.textBoxStepx.TextChanged += new System.EventHandler(this.textBoxStepx_TextChanged);
+            this.textBoxStepx.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxStepx_KeyDown);
+            this.textBoxStepx.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxStepx_KeyPress);
             // 
             // Inputn
             // 
@@ -103,12 +114,57 @@
             this.textBoxInputn.Name = "textBoxInputn";
             this.textBoxInputn.Size = new System.Drawing.Size(106, 20);
             this.textBoxInputn.TabIndex = 7;
+            this.textBoxInputn.TextChanged += new System.EventHandler(this.textBoxInputn_TextChanged);
+            this.textBoxInputn.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxInputn_KeyDown);
+            this.textBoxInputn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxInputn_KeyPress);
+            // 
+            // buttonD
+            // 
+            this.buttonD.Location = new System.Drawing.Point(40, 197);
+            this.buttonD.Name = "buttonD";
+            this.buttonD.Size = new System.Drawing.Size(74, 25);
+            this.buttonD.TabIndex = 8;
+            this.buttonD.Text = "Решение";
+            this.buttonD.UseVisualStyleBackColor = true;
+            this.buttonD.Click += new System.EventHandler(this.buttonD_Click);
+            // 
+            // buttonC
+            // 
+            this.buttonC.Location = new System.Drawing.Point(140, 198);
+            this.buttonC.Name = "buttonC";
+            this.buttonC.Size = new System.Drawing.Size(81, 24);
+            this.buttonC.TabIndex = 9;
+            this.buttonC.Text = "Сброс";
+            this.buttonC.UseVisualStyleBackColor = true;
+            this.buttonC.Click += new System.EventHandler(this.buttonC_Click);
+            // 
+            // textBoxAnswer
+            // 
+            this.textBoxAnswer.Location = new System.Drawing.Point(338, 54);
+            this.textBoxAnswer.Multiline = true;
+            this.textBoxAnswer.Name = "textBoxAnswer";
+            this.textBoxAnswer.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxAnswer.Size = new System.Drawing.Size(316, 168);
+            this.textBoxAnswer.TabIndex = 10;
+            // 
+            // Answer
+            // 
+            this.Answer.AutoSize = true;
+            this.Answer.Location = new System.Drawing.Point(481, 34);
+            this.Answer.Name = "Answer";
+            this.Answer.Size = new System.Drawing.Size(40, 13);
+            this.Answer.TabIndex = 11;
+            this.Answer.Text = "Ответ:";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(678, 261);
+            this.ClientSize = new System.Drawing.Size(678, 351);
+            this.Controls.Add(this.Answer);
+            this.Controls.Add(this.textBoxAnswer);
+            this.Controls.Add(this.buttonC);
+            this.Controls.Add(this.buttonD);
             this.Controls.Add(this.textBoxInputn);
             this.Controls.Add(this.Inputn);
             this.Controls.Add(this.textBoxStepx);
@@ -134,6 +190,10 @@
         private System.Windows.Forms.TextBox textBoxStepx;
         private System.Windows.Forms.Label Inputn;
         private System.Windows.Forms.TextBox textBoxInputn;
+        private System.Windows.Forms.Button buttonD;
+        private System.Windows.Forms.Button buttonC;
+        private System.Windows.Forms.TextBox textBoxAnswer;
+        private System.Windows.Forms.Label Answer;
     }
 }
 
