@@ -16,7 +16,17 @@ namespace Control_work_1._1
         {
             InitializeComponent();
         }
+
+         double Kvad (double x)
+        {
+            return (x*x);
+        }
+         double Expon (double Kvad)
+        {
+            return (Math.Exp(Kvad));
+        }
         
+
         private void textBoxStartx_TextChanged(object sender, EventArgs e)
         {
             textBoxStartx.MaxLength = 5; //Макс.размер текстбокса
@@ -69,32 +79,44 @@ namespace Control_work_1._1
 
         private void buttonD_Click(object sender, EventArgs e)
         {
-            int a = Convert.ToInt32(textBoxStartx.Text);
-            int b = Convert.ToInt32(textBoxEndx.Text);
+            double a = Convert.ToDouble(textBoxStartx.Text);
+            double b = Convert.ToDouble(textBoxEndx.Text);
             if (b <= 0)
             {
                 MessageBox.Show("Введите конечное значение x больше 0");
                 textBoxEndx.Focus();
 
-            }            
-                           
-            int s = Convert.ToInt32(textBoxStepx.Text);
+            }
+
+            double s = Convert.ToDouble(textBoxStepx.Text);
             if (s <= 0)
             {
                 MessageBox.Show("Введите значение шага больше 0");
                 textBoxStepx.Focus();
             }
-                
-            int n = Convert.ToInt32(textBoxInputn.Text);
+
+            double n = Convert.ToDouble(textBoxInputn.Text);
             if (n <= 0)
             {
                 MessageBox.Show("Введите значение n больше 0");
                 textBoxInputn.Focus();
 
             }
-                
-               
-                
+            for (double i = a; i <= b;)
+            {
+                double Y = ((1 + 2 *(a*a)) * Math.Exp(a*a));
+                textBoxAnswer.Text += ("\r\n")+("При x=") + Convert.ToString(a) + ("   Y(x)=") + Convert.ToString(Y);
+                i=i + s;
+                a = a + s;
+
+            }
+
+            
+
+           
+           
+
+
 
 
 
@@ -108,6 +130,7 @@ namespace Control_work_1._1
             textBoxStepx.Clear();
             textBoxInputn.Clear();
             textBoxAnswer.Clear();
+            textBoxStartx.Focus();
 
         }
 

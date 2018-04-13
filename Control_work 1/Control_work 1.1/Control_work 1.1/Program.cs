@@ -6,8 +6,13 @@ using System.Windows.Forms;
 
 namespace Control_work_1._1
 {
+    public class Function
+    {
+
+    }
     static class Program
     {
+    
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
