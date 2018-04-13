@@ -25,6 +25,20 @@ namespace Control_work_1._1
         {
             return (Math.Exp(Kvad));
         }
+        double Factorial (double m)
+        {
+            if (m == 0 || m == 1)
+                return 1;
+            else
+            {
+                double l = 1;
+                for (double i=1; i <= m; i++)
+                {
+                    l *= i;
+                }
+                return l;
+            }
+        }
         
 
         private void textBoxStartx_TextChanged(object sender, EventArgs e)
@@ -79,6 +93,7 @@ namespace Control_work_1._1
 
         private void buttonD_Click(object sender, EventArgs e)
         {
+            textBoxAnswer.Clear();
             double a = Convert.ToDouble(textBoxStartx.Text);
             double b = Convert.ToDouble(textBoxEndx.Text);
             if (b <= 0)
@@ -102,24 +117,30 @@ namespace Control_work_1._1
                 textBoxInputn.Focus();
 
             }
+            double k = 0;
+            double F = 0;
             for (double i = a; i <= b;)
             {
                 double Y = ((1 + 2 *(a*a)) * Math.Exp(a*a));
                 textBoxAnswer.Text += ("\r\n")+("При x=") + Convert.ToString(a) + ("   Y(x)=") + Convert.ToString(Y);
-                i=i + s;
+                for (double z = 0; z <= n; z++)
+                {
+                    double u = 2 * k;
+                    double S = (((2 * k) + 1) / Factorial(k)) * Math.Pow(a, u);
+                    F=F+S;                    
+                    k++;
+                }
+                textBoxAnswer.Text += ("\r\n") + ("При x=") + Convert.ToString(a) + ("  и n=") + Convert.ToString(n) + ("\r\n")+("S(x)=") + Convert.ToString(F);
+                double E = Y - F;
+                double G = Math.Abs(E);
+                textBoxAnswer.Text += ("\r\n") + ("При x=") + Convert.ToString(a) + ("  G(x)=")+Convert.ToString(G);
+                textBoxAnswer.Text += ("\r\n") + ("------------------------------------");
+                i =i + s;
                 a = a + s;
 
             }
 
-            
-
-           
-           
-
-
-
-
-
+                                     
 
         }
 
