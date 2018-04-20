@@ -12,8 +12,6 @@ namespace Control_work_1._2
         {
             int Str = 5; // Макс.кол-во строк
             int Stb = 5; // Макс. кол-во столбцов
-            int Stroka1 = 0;
-            int Stroka2 = 0;
             int[,] array = new int[Str, Stb];
 
             Console.WriteLine("Введите количество строк массива (не более 5):");
@@ -33,33 +31,59 @@ namespace Control_work_1._2
                     
                 }
             }
-
+            Console.WriteLine();
+            int KolNulStrok = 0;
+            int KolNeNulStrok = 0;
             for (int i =0; i<Str; i++)
             {
                 for (int j = 0; j < Stb; j++)
                 {
                     if (array[i, j] == 0)
                     {
-                        ++Stroka1;
+                        ++KolNulStrok;
                     }
                 }
-             if (Stroka1 == 0)
+             if (KolNulStrok == 0)
                     {
-                        ++Stroka2;
+                        ++KolNeNulStrok;
                     }
                     else
                     {
-                        Stroka1 = 0;
+                        KolNulStrok = 0;
                     }
                    
                 }
             
-            //int N = Str - Stroka;
-            Console.WriteLine("\n");
-            Console.WriteLine("Количество строк, не содержащих ни одного нулевого элемента:");
-            Console.WriteLine(Stroka2);
+            Console.WriteLine();
+            Console.WriteLine("Количество строк, не содержащих ни одного нулевого элемента:  {0}", KolNeNulStrok);
+           
 
+            Console.WriteLine();
+            int MaxCh = 0;
+            int ResaltMaxCh = 0;
+            int KolPovtMaxCh = 0;
+            for(int i = 0; i < Str; i++)
+            {
+                for (int j = 0; j<Stb; j++)
+                {
+                    if (array[i, j]==MaxCh)
+                    {
+                        KolPovtMaxCh++;
+                    }
+                    if (array[i, j] > MaxCh)
+                    {
+                        MaxCh = array[i, j];
+                        KolPovtMaxCh = 1;
+                    }
 
+                }
+                if (KolPovtMaxCh >= 2)
+                {
+                    ResaltMaxCh = MaxCh;
+                }
+            }
+
+            Console.WriteLine("Максимальный элемент, встречающийся больше одного раза:  {0}", ResaltMaxCh);
             Console.ReadKey();
         }
     }
