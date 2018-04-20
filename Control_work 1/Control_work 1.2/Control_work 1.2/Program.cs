@@ -12,6 +12,8 @@ namespace Control_work_1._2
         {
             int Str = 5; // Макс.кол-во строк
             int Stb = 5; // Макс. кол-во столбцов
+            int Stroka1 = 0;
+            int Stroka2 = 0;
             int[,] array = new int[Str, Stb];
 
             Console.WriteLine("Введите количество строк массива (не более 5):");
@@ -28,9 +30,35 @@ namespace Control_work_1._2
                 {
                     array[i, j] = r.Next(0, 10);
                     Console.Write("{0,3}", array[i, j]);
-
+                    
                 }
             }
+
+            for (int i =0; i<Str; i++)
+            {
+                for (int j = 0; j < Stb; j++)
+                {
+                    if (array[i, j] == 0)
+                    {
+                        ++Stroka1;
+                    }
+                }
+             if (Stroka1 == 0)
+                    {
+                        ++Stroka2;
+                    }
+                    else
+                    {
+                        Stroka1 = 0;
+                    }
+                   
+                }
+            
+            //int N = Str - Stroka;
+            Console.WriteLine("\n");
+            Console.WriteLine("Количество строк, не содержащих ни одного нулевого элемента:");
+            Console.WriteLine(Stroka2);
+
 
             Console.ReadKey();
         }
